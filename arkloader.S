@@ -1,7 +1,12 @@
+;assemble
+; nasm arkloader.S -f bin -o arkloader.bin
+;boot
+; qemu-system-x86_64 -hda arkloader.bin -nographic
+
 bits 16
 org 0x7C00	
 
-; set background
+;set background
 mov ah, 0x06
 xor al, al
 xor cx, cx
